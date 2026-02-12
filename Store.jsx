@@ -2,22 +2,17 @@ import React, { useState } from 'react'
 
 const Store = () => {
     const products = [
-        { id: 1, name: "Wireless Mouse", price: 100 },
-        { id: 2, name: "Keyboard", price: 800 },
-        { id: 3, name: "Earpod", price: 300 },
-        { id: 4, name: "USB-C Cable 1M", price: 150 },
-        { id: 5, name: "Universal Charger", price: 600 },
+        { id: 1, name: "แอปเปิ้ล", price: 100 },
+        { id: 2, name: "บลูเบอร์รี่", price: 280 },
+        { id: 3, name: "สตรเบอร์รี่", price: 300 },
+        { id: 4, name: "กีวี่", price: 150 },
+        { id: 5, name: "เชอร์รี่", price: 600 },
     ];
-    const itemStyle = {
-    border: "1px solid #ccc",
-    borderRadius: "5px",
-    padding: "10px",
-    marginBottom: "10px",
-  }
+    
   const [selectedProduct, setSelectdProduct] = useState({});
   return (
     <div>
-        <h1>ร้านไอทีสเตชั่น</h1>
+        <h1 className="text-7xl font-bold text-indigo-600">ร้านฟรุตตี้</h1> 
     <hr />
     {products.map((p) => (
         <div key={p.id} style={itemStyle} onClick= { () => setSelectdProduct(p) }>
